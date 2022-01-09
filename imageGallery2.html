@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Calligraphy Scupture</title>
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+   <link rel="stylesheet" href="gallery-clean.css">
+   <link href="css/style2.css" rel="stylesheet">
+   <link href="css/headers.css" rel="stylesheet">
+    <script>
+        function showImage(imgs) {
+            // Get the expanded image
+            var expandImg = document.getElementById("expandedImg");
+            // Get the image text
+            var imgText = document.getElementById("imgtext");
+            // Use the same src in the expanded image as the image being clicked on from the grid
+            expandImg.src = imgs.src;
+            // Use the value of the alt attribute of the clickable image as text inside the expanded image
+            imgText.innerHTML = imgs.alt;
+            // Show the container element (hidden with CSS)
+            expandImg.parentElement.style.display = "block";
+        } 
+    </script>
+
+   <style>
+         /* The grid: Four equal columns that floats next to each other */
+        .column {
+        float: left;
+        width: 10%;
+        padding: none;
+        outline: none;
+        border: none;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+        opacity: 0.8;
+        cursor: pointer;
+        }
+
+        .column img:hover {
+        opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .container {
+        /* position: relative; */
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        text-align: center;
+        color: white;
+        }
+
+        /* Top left text */
+        .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        }
+
+
+        /* Expanding image text */
+        #imgtext {
+        position: relative;
+        bottom: 0px;
+        left: 15px;
+        color: white;
+        font-size: 30px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+        } 
+
+       .tooltip {
+         position: relative;
+         display: inline-block;
+         border-bottom: 1px dotted black;
+       }
+       
+       .tooltip .tooltiptext {
+         visibility: hidden;
+         width: 120px;
+         background-color: #555;
+         color: #fff;
+         text-align: center;
+         border-radius: 6px;
+         padding: 5px 0;
+         position: absolute;
+         z-index: 1;
+         bottom: 125%;
+         left: 50%;
+         margin-left: -60px;
+         opacity: 0;
+         transition: opacity 0.3s;
+       }
+       
+       .tooltip .tooltiptext::after {
+         content: "";
+         position: absolute;
+         top: 100%;
+         left: 50%;
+         margin-left: -5px;
+         border-width: 5px;
+         border-style: solid;
+         border-color: #555 transparent transparent transparent;
+       }
+       
+       .tooltip:hover .tooltiptext {
+         visibility: visible;
+         opacity: 1;
+       }
+
+        /* Style the video: 100% width and height to cover the entire window */
+       #irisVideo {
+       right: 0;
+       bottom: 0;
+       min-width: 60%;
+       min-height: 60%;
+       outline: none;
+       border: none;
+       }
+
+       /* Add some content at the bottom of the video/page */
+       .content {
+       position: fixed;
+       bottom: 0;
+       background: rgba(0, 0, 0, 0.5);
+       color: #f1f1f1;
+       width: 100%;
+       padding: 20px;
+       }
+
+        
+       </style>
+
+
+
+</head>
+<body class="bg-dark text-white">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <!-- Navbar -->
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="60" height="48"><use xlink:href="#bootstrap"/></svg>
+            <!-- <span class="fs-4">Calligraphy Sculpture</span> -->
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th class="bg-dark text-white"><h1 class="bg-dark text-white">Calligraphy Sculpture</h1></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="bg-dark text-white"><h2 class="bg-dark text-white">Iris Milward</h2></td>
+                  </tr>
+                  </tbody>
+            </table>
+
+          </a>
+    
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="imageGallery.html">Gallery 1</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="imageGallery2.html">Gallery 2</a>
+                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="videoGallery.html">Video Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        <!-- Navbar -->
+
+      </header>
+      <h1 class="bg-dark text-white">Photographs - Gallery 2</h1>
+      <div class="row bg-dark text-white">
+        <p></p>
+        <p></p>
+        <div class="column bg-dark text-white " >
+          <img class="border-none" src="images/iris9.png" alt="Detail From ”you must never sleep under a Magnolia
+         in Alice Oswald’s Falling Awake" onclick="showImage(this);">
+        </div>
+        <!-- <div class="column">
+          <img class="img-thumbnail" src="images/iris10.png" alt="" onclick="showImage(this);">
+        </div> -->
+        <div class="column bg-dark text-white">
+          <img class="border-none" src="images/iris8.png" alt="when the flower begins to smell
+            as if it’s roots have reached
+             the layer of
+             thirst upon the
+            Unsealed jar of
+            Joy.
+         From ”you must never sleep under a Magnolia” in Alice Oswald’s Falling Awake." onclick="showImage(this);">
+        </div>
+        <div class="column bg-dark text-white"></div>
+        
+          <p></p>
+          <p></p>  
+   
+        <div class="column bg-dark text-white">
+            <img class="border-none" src="images/iris1.png" alt="Certain conditions are needed
+            For flying
+            The bird told me.....
+            Having wings is not enough
+            If you don’t know to turn
+            Fear into wind.
+            From ‘The Rabbit Hole
+            By Avital Harari
+            צריך תנאים כדי לעוף
+            אמרה לי הציפור....
+           לא מספיק שיש לך כנפיים
+            אם אינך יודעת להפוך
+            את הפחד לרוח.
+             מתוך ׳מחילת הארנב׳
+             של אביטל הררי
+        " onclick="showImage(this);">
+        </div>
+          <div class="column bg-dark text-white">
+            <img class="border-none" src="images/iris2.png" alt="There’s this shape, black as the entrance to a cave.
+            A longing wells up in its throat
+            like a blossom
+            as it breathes slowly. 
+            What does the world 
+            mean to you if you can’t trust it 
+            to go on shining when you’re
+             not there?............
+            
+            From ‘October’
+            by Mary Oliver" onclick="showImage(this);">
+          </div>
+          <p></p>
+        <p></p>
+          <div class="column bg-dark text-white">
+            <img class="border-none" src="images/iris3.png" alt="...no more than a flash of free-will
+            until the clouds close their options and the whole
+            melancholy air surrenders to pure fear and Falls...
+            
+            From Falling Awake by Alice Oswald ." onclick="showImage(this);">
+          </div>
+          <div class="column bg-dark text-white"></div>
+          <p></p>
+          <p></p>
+          <div class="column bg-dark text-white">
+            <img class="border-none" src="images/iris13.jpg" alt="The way of love is not a subtle argument.
+            The door there is a devastation.
+            Birds make great sky-circles of their freedom.
+            How do they learn it?
+            They fall and falling,
+            they're given wings.
+            
+            Mawlana Jalal-al-Din Rumi" onclick="showImage(this);">
+          </div>
+          
+          <div class="column bg-dark text-white">
+            <img class="border-none" src="images/iris12.jpg" alt="The way of love is not a subtle argument.
+            The door there is a devastation.
+            Birds make great sky-circles of their freedom.
+            How do they learn it?
+            They fall and falling,
+            they're given wings.
+            
+            Mawlana Jalal-al-Din Rumi" onclick="showImage(this);">
+          </div>
+          <p></p>
+          <p></p>
+      </div>
+      
+      <!-- The expanding image container -->
+      <div class="container">
+        <!-- Close the image -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      
+        <!-- Expanded image -->
+        <img id="expandedImg" style="width:98% height:95%">
+        <div class="col">
+            <div id="imgtext" style="width:80%" ></div> 
+        </div>
+      </div>
+            
